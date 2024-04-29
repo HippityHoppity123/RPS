@@ -4,79 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <script>
-        function getComputerChoice () {
-            let Random = Math.floor(Math.random()*3)
-            switch (Random) {
-                case 1:
-                    return "Scissors"
-                    break;
-                case 2:
-                    return "Rock"
-                    break;
-                default:
-                    return "Paper"
-                    break;
-            }
-        }
-        function getHumanChoice() {
-            let response = window.prompt("Rock, Paper, or Scissors?")
-            return response
-        }
-        
-        function playRound (humanChoice, computerChoice) {
-            if (humanChoice===computerChoice) {
-                console.log("Draw!")
-            }
-            else if (humanChoice === "ROCK") {
-                if (computerChoice === "SCISSORS") {
-                    console.log("You win!")
-                    humanScore++
-                }
-                else {
-                    console.log("Womp Womp")
-                    computerScore++
-                }
-            }
-            else if (humanChoice === "PAPER") {
-                if (computerChoice === "ROCK") {
-                    console.log("You win!")
-                    humanScore++
-                }
-                else {
-                    console.log("Womp Womp")
-                    computerScore++
-                }
-            }
-            else {
-                if (computerChoice === "PAPER") {
-                    console.log("You win!")
-                    humanScore++
-                }
-                else {
-                    console.log("Womp Womp")
-                    computerScore++
-                }
-            }
-        }
-        function playGame () {
-            for (let i = 0; i <5; i++) {
-                humanSelection = getHumanChoice().toUpperCase();
-                computerSelection = getComputerChoice().toUpperCase();
-                playRound(humanSelection,computerSelection)
-            }
-            console.log(`human score: ${humanScore}`)
-            console.log(`computer score: ${computerScore}`)
-            
-        }
-        let humanScore = 0
-        let computerScore = 0
-        let humanSelection = getHumanChoice().toUpperCase();
-        let computerSelection = getComputerChoice().toUpperCase();
-        playGame()
-        
     </script>
 </body>
 </html>
